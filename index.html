@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kids Diwali Celebration 2025 - Sydney</title>
     <style>
+
+        /* --- NEW: Smooth Scrolling --- */
+        html {
+            scroll-behavior: smooth;
+        }
         /* --- Basic Setup & Typography --- */
         body {
             margin: 0;
@@ -105,26 +110,44 @@
         }
             */
 
-    /* --- Header --- */
-        header {
-            padding: 0px;
-            display: flex;
-            justify-content: center; /* Changed to center the logo */
-            align-items: center;
-            background-color: #1a1a2e;
-        }
-        
-        /* NEW: Style for the header logo image */
-        .header-logo-img {
-            height: 75px;
-            width: auto;
-        }
+   /* --- Header --- */
+header {
+    padding: 10px 25px; /* Added some padding for better spacing */
+    display: flex;
+    justify-content: space-between; /* This moves the nav to the right */
+    align-items: center;
+    background-color: #1a1a2e;
+}
+ 
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Adds space between the nav items */
+}
 
-        .nav-icon {
-            font-size: 2rem;
-            cursor: pointer;
-        }
-        
+/* Style for the plain text links in the nav */
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffc107; /* Gold color on hover to match the theme */
+}
+
+/* Override margin for the button specifically in the header */
+.header-nav .button {
+    margin-top: 0; 
+}
+
+/* NEW: Style for the header logo image */
+.header-logo-img {
+    height: 75px; /* Changed from 75px to 60px */
+    width: auto;
+}
         /* --- Hero Section --- */
         .hero {
             padding-top: 50px;
@@ -219,6 +242,48 @@
             text-decoration: none;
             font-size: 1.5rem;
         }
+
+        /* --- Responsive Styles --- */
+        @media screen and (max-width: 768px) {
+            /* Hide header navigation on mobile and center logo */
+            .header-nav {
+                display: none;
+            }
+            header {
+                justify-content: center;
+            }
+
+            /* Make grids single-column on mobile */
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            /* Adjust main heading sizes for smaller screens */
+            .logo-main {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-section .logo-main {
+                font-size: 2rem;
+            }
+
+            /* Stack buttons vertically on mobile */
+            .button-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            /* Reduce padding on sections for more content space */
+            .container, .cta-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -229,8 +294,12 @@
     </header> -->
 
     <header>
-       <img src="Baps_logo-WHITE.webp" alt="BAPS Logo" class="header-logo-img">
-   </header>
+   <img src="Baps_logo-WHITE.webp" alt="BAPS Logo" class="header-logo-img">
+   <nav class="header-nav">
+       <a href="#attractions" class="nav-link">Attractions</a>
+       <a href="#kdc2024" class="nav-link">KDC 2024</a>
+       <a href="#tickets" class="button">Register Now</a> </nav>
+</header>
 
     <img src="KDC 2025 Logo - Colour.png" alt="Event Banner" style="width:100%;height:auto;margin-top:5px;">
 
