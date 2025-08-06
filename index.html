@@ -86,7 +86,7 @@
         }
 
         /* --- Header --- */
-        header {
+       /* header {
             padding: 20px;
             display: flex;
             justify-content: space-between;
@@ -98,6 +98,26 @@
             font-weight: bold;
         }
         .header-logo .diwali { color: #ff8c00; }
+
+        .nav-icon {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+            */
+
+    /* --- Header --- */
+        header {
+            padding: 0px;
+            display: flex;
+            justify-content: center; /* Changed to center the logo */
+            align-items: center;
+        }
+        
+        /* NEW: Style for the header logo image */
+        .header-logo-img {
+            height: 75px;
+            width: auto;
+        }
 
         .nav-icon {
             font-size: 2rem;
@@ -202,10 +222,14 @@
 </head>
 <body>
 
-   <!---- <header>
+   <!-- <header>
         <div class="header-logo">KIDS <span class="diwali">DIWALI </span><span class="celebration">CELEBRATION 2025</span></div>
         
-    </header> --->
+    </header> -->
+
+    <header>
+       <img src="Baps_logo-WHITE.webp" alt="BAPS Logo" class="header-logo-img">
+   </header>
 
     <img src="KDC 2025 Logo - Colour.png" alt="Event Banner" style="width:100%;height:auto;margin-top:30px;">
 
@@ -266,7 +290,8 @@
                 <p>FREE ENTRY FOR KIDS UNDER 12</p>
                 <p>MARK YOUR CALENDARS</p>
                 <p>TIME</p>
-                <p>ADDRESS</p>
+                <p>BAPS Swaminarayan Hindu Mandir & Cultural Precinct, Sydney
+230 Aldington Road, Kemps Creek NSW 2178</p>
             </div>
             <a href="#" class="button">GET TICKETS</a>
         </section>
