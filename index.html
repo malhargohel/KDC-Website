@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kids Diwali Celebration 2025 - Sydney</title>
     <style>
-
         /* --- NEW: Smooth Scrolling --- */
         html {
             scroll-behavior: smooth;
@@ -56,14 +55,13 @@
             font-size: 1rem;
             margin-top: 20px;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border: 2px solid transparent; /* Added for consistent sizing with outline button */
+            border: 2px solid transparent;
         }
 
         .button:hover {
             background-color: #ffA500;
         }
         
-        /* --- Style for the outline button --- */
         .button-outline {
             background-color: transparent;
             border: 2px solid #fff;
@@ -75,7 +73,6 @@
             color: #1a1a2e;
         }
 
-        /* --- Style for grouping buttons --- */
         .button-group {
             display: flex;
             justify-content: center;
@@ -91,226 +88,218 @@
         }
 
         /* --- Header --- */
-       /* header {
-            padding: 20px;
+        header {
+            padding: 10px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        
-        .header-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .header-logo .diwali { color: #ff8c00; }
-
-        .nav-icon {
-            font-size: 2rem;
-            cursor: pointer;
-        }
-            */
-
-   /* --- Header --- */
-header {
-    padding: 10px 25px; /* Added some padding for better spacing */
-    display: flex;
-    justify-content: space-between; /* This moves the nav to the right */
-    align-items: center;
-    background-color: #1a1a2e;
-}
- 
-.header-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px; /* Adds space between the nav items */
-}
-
-/* Style for the plain text links in the nav */
-.nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #ffc107; /* Gold color on hover to match the theme */
-}
-
-/* Override margin for the button specifically in the header */
-.header-nav .button {
-    margin-top: 0; 
-}
-
-/* NEW: Style for the header logo image */
-.header-logo-img {
-    height: 75px; /* Changed from 75px to 60px */
-    width: auto;
-}
-        /* --- Hero Section --- */
-        .hero {
-            padding-top: 50px;
-            padding-bottom: 80px;
+            background-color: #1a1a2e;
+            position: relative; /* Needed for the mobile dropdown */
+            z-index: 1000;
         }
 
-        .event-details {
-            margin-top: 30px;
+        .header-logo-img {
+            height: 75px;
+            width: auto;
         }
 
-        .event-details p {
-            margin: 8px 0;
-            font-size: 1.1rem;
-            font-weight: bold;
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
         }
 
-        /* --- Attractions & Gallery Grid --- */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px; 
-            max-width: 1100px; 
-            margin: 0 auto; 
-        }
-
-        .grid-item {
-            overflow: hidden; 
-        }
-
-        .grid-item img {
-            width: 100%; 
-            height: auto;
-            object-fit: cover; 
-            display: block; 
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .grid-item img:hover {
-            transform: scale(1.05);
-        }
-
-        /* --- NEW: Style for the orange attraction titles --- */
-        .attraction-title {
-            color: #ff8c00;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 15px;
-        }
-        
-        .section-footer-text {
-            margin-top: 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #e0e0e0;
-        }
-
-        /* --- Tickets & Sponsorship Section --- */
-        .cta-section {
-            background-color: #292946;
-            padding: 60px 20px;
-        }
-        
-        .cta-section .logo-main {
-            font-size: 2.5rem;
-        }
-
-        /* --- Footer --- */
-        footer {
-            padding: 40px 20px;
-            background-color: #0f0f1a;
-        }
-        
-        footer .logo-main {
-            font-size: 2rem;
-        }
-
-        .copyright {
-            margin-top: 20px;
-            color: #aaa;
-        }
-        
-        .back-to-top {
-            display: inline-block;
-            margin-top: 30px;
-            color: #fff;
-            background-color: #ff8c00;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 50%;
+        .nav-link {
+            color: #ffffff;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
         }
 
-        /* --- Responsive Styles --- */
+        .nav-link:hover {
+            color: #ffc107;
+        }
+
+        .header-nav .button {
+            margin-top: 0;
+        }
+
+        /* --- NEW: Hamburger Menu Styles --- */
+        .hamburger-menu {
+            display: none; /* Hidden on desktop */
+            flex-direction: column;
+            justify-content: space-around;
+            width: 2rem;
+            height: 2rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+        }
+
+        .hamburger-menu span {
+            width: 2rem;
+            height: 0.25rem;
+            background: #ffffff;
+            border-radius: 10px;
+            transition: all 0.3s linear;
+            position: relative;
+            transform-origin: 1px;
+        }
+        
+        /* --- Hero Section & Others --- */
+        /* (No changes to other sections, keeping them for completeness) */
+        .hero { padding-top: 50px; padding-bottom: 80px; }
+        .event-details { margin-top: 30px; }
+        .event-details p { margin: 8px 0; font-size: 1.1rem; font-weight: bold; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; max-width: 1100px; margin: 0 auto; }
+        .grid-item { overflow: hidden; }
+        .grid-item img { width: 100%; height: auto; object-fit: cover; display: block; border-radius: 12px; transition: transform 0.3s ease; }
+        .grid-item img:hover { transform: scale(1.05); }
+        .attraction-title { color: #ff8c00; font-weight: bold; font-size: 1.2rem; margin-top: 15px; }
+        .section-footer-text { margin-top: 40px; font-size: 1.2rem; font-weight: bold; color: #e0e0e0; }
+        .cta-section { background-color: #292946; padding: 60px 20px; }
+        .cta-section .logo-main { font-size: 2.5rem; }
+        footer { padding: 40px 20px; background-color: #0f0f1a; }
+        footer .logo-main { font-size: 2rem; }
+        .copyright { margin-top: 20px; color: #aaa; }
+        .back-to-top { display: inline-block; margin-top: 30px; color: #fff; background-color: #ff8c00; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; text-decoration: none; font-size: 1.5rem; }
+
+        /* --- UPDATED: Responsive Styles for Mobile Menu --- */
         @media screen and (max-width: 768px) {
-            /* Hide header navigation on mobile and center logo */
             .header-nav {
                 display: none;
-            }
-            header {
-                justify-content: center;
-            }
-
-            /* Make grids single-column on mobile */
-            .grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            /* Adjust main heading sizes for smaller screens */
-            .logo-main {
-                font-size: 2.2rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .cta-section .logo-main {
-                font-size: 2rem;
-            }
-
-            /* Stack buttons vertically on mobile */
-            .button-group {
                 flex-direction: column;
-                gap: 15px;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 25px;
+                background-color: #1a1a2e;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 20px 0;
+                max-height: 0; /* Initially hidden */
+                overflow: hidden;
+                transition: max-height 0.4s ease-in-out;
             }
 
-            /* Reduce padding on sections for more content space */
-            .container, .cta-section {
-                padding-left: 20px;
-                padding-right: 20px;
+            .header-nav.is-active {
+                display: flex;
+                max-height: 500px; /* Reveal the menu */
             }
+
+            .hamburger-menu {
+                display: flex; /* Show the hamburger on mobile */
+            }
+
+            /* Rest of the mobile styles */
+            .grid { grid-template-columns: 1fr; gap: 20px; }
+            .logo-main, .cta-section .logo-main { font-size: 2.2rem; }
+            h2 { font-size: 2rem; }
+            .button-group { flex-direction: column; gap: 15px; }
+            .container, .cta-section { padding-left: 20px; padding-right: 20px; }
+        }
+
+        /* --- NEW: KDC 2024 Carousel Styles --- */
+        .kdc-carousel-wrapper {
+            display: none;
+        }
+        .kdc-carousel {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 25px auto;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .carousel-img {
+            display: none;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: opacity 0.5s;
+            position: absolute;
+            left: 0; top: 0;
+        }
+        .carousel-img.active {
+            display: block;
+            position: relative;
+            opacity: 1;
+            z-index: 1;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .carousel-indicators .indicator {
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            opacity: 0.5;
+            border-radius: 50%;
+            display: inline-block;
+            transition: opacity 0.3s;
+            cursor: pointer;
+        }
+        .carousel-indicators .indicator.active {
+            opacity: 1;
+            background: #ff8c00;
+        }
+        @media screen and (max-width: 768px) {
+            .kdc2024-grid {
+                display: none !important;
+            }
+            .kdc-carousel-wrapper {
+                display: block;
+            }
+        }
+
+        /* --- NEW: KDC 2024 Grid Styles (Desktop) --- */
+        .kdc2024-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto 25px auto;
+        }
+        .kdc2024-grid .grid-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+            transition: transform 0.3s;
+        }
+        .kdc2024-grid .grid-item img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-   <!-- <header>
-        <div class="header-logo">KIDS <span class="diwali">DIWALI </span><span class="celebration">CELEBRATION 2025</span></div>
-        
-    </header> -->
-
     <header>
-   <img src="Baps_logo-WHITE.webp" alt="BAPS Logo" class="header-logo-img">
-   <nav class="header-nav">
-       <a href="#attractions" class="nav-link">Attractions</a>
-       <a href="#kdc2024" class="nav-link">KDC 2024</a>
-       <a href="#tickets" class="button">Register Now</a> </nav>
-</header>
+       <img src="Baps_logo-WHITE.webp" alt="BAPS Logo" class="header-logo-img">
+       <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+       </button>
+       <nav class="header-nav">
+           <a href="#attractions" class="nav-link">Attractions</a>
+           <a href="#kdc2024" class="nav-link">KDC 2024</a>
+           <a href="#tickets" class="button">Register Now</a>
+       </nav>
+    </header>
 
     <img src="KDC 2025 Logo - Colour.png" alt="Event Banner" style="width:100%;height:auto;margin-top:5px;">
 
     <main>
-       <!-- <section class="hero">
-            <div class="logo-main">
-                <span class="kids">KIDS</span> <span class="diwali">DIWALI</span> <span class="celebration">CELEBRATION 2025</span>
-            </div>
-            <p class="logo-subtext">THE BEACON OF LIGHT</p>
-        </section> -->
-
         <section class="container" style="padding-top: 0; padding-bottom: 0;">
              <h2 style="color: #ff8c00; margin-bottom: 20px;">What is Kids Diwali Celebrations?</h2>
              <p style="font-size: 1.1rem; line-height: 1.7; max-width: 750px; margin: 0 auto 20px auto; color: #e0e0e0;">
@@ -324,7 +313,7 @@ header {
              </p>
         </section>
 
-        <section class="container">
+        <section id="attractions" class="container">
             <h2>ATTRACTIONS</h2>
             <div class="grid">
                 <div class="grid-item">
@@ -355,7 +344,7 @@ header {
             <p class="section-footer-text">THERE IS SOMETHING FOR EVERYONE TO ENJOY</p>
         </section>
         <section id="tickets" class="cta-section">
-            <h2>TICKETS</h2>
+            <h2>REGISTER</h2>
             <div class="event-details">
                 <p>FREE ENTRY FOR KIDS UNDER 12</p>
                 <p>MARK YOUR CALENDARS</p>
@@ -363,12 +352,12 @@ header {
                 <p>BAPS Swaminarayan Hindu Mandir & Cultural Precinct, Sydney
 230 Aldington Road, Kemps Creek NSW 2178</p>
             </div>
-            <a href="#" class="button">GET TICKETS</a>
+            <a href="#" class="button">REGISTER NOW</a>
         </section>
         
-        <section class="container">
-            <h2>KDC 2024</h2>
-            <div class="grid">
+        <section id="kdc2024" class="container">
+            <h2>Kids Diwali Celebration 2024</h2>
+            <div class="kdc2024-grid">
                 <div class="grid-item">
                     <img src="Santo_Abhishek.jpg" alt="Santo Abhishek ceremony">
                 </div>
@@ -388,12 +377,30 @@ header {
                     <img src="Show.jpg" alt="On-stage performance">
                 </div>
             </div>
+            <div class="kdc-carousel-wrapper">
+                <div class="kdc-carousel">
+                    <img src="Santo_Abhishek.jpg" alt="Santo Abhishek ceremony" class="carousel-img active">
+                    <img src="Prasang_Station.jpg" alt="Prasang Station exhibit" class="carousel-img">
+                    <img src="Kid_BBall.jpg" alt="Kid playing basketball game" class="carousel-img">
+                    <img src="Rides.jpg" alt="Children on a carnival ride" class="carousel-img">
+                    <img src="Fireworks.jpg" alt="Fireworks display at night" class="carousel-img">
+                    <img src="Show.jpg" alt="On-stage performance" class="carousel-img">
+                </div>
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
             <a href="https://www.baps.org/News/2024/Kids-Diwali-Celebration-2024-27269.aspx" class="button">VIEW GALLERY</a>
         </section>
 
         <section class="cta-section">
             <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
-                <h2 style="color: #ff8c00;">BAPS Kids Diwali Celebrations: Lighting Beacons</h2>
+                <h2 style="color: #ff8c00;">BAPS Kids Diwali Celebrations: The Beacon of Light</h2>
                 <p style="font-size: 1.1rem; line-height: 1.8; max-width: 650px; margin: 0 auto 25px auto; color: #e0e0e0;">
                     The Kids Diwali Celebration is proudly <strong>hosted by BAPS Swaminarayan Sanstha</strong>, offers a unique blend of fun and profound values. KDC is a vibrant celebration where children are gently guided to learn the true meaning of Diwali through engaging <strong>creativity</strong>, <strong>captivating stories</strong>, and the spirit of <strong>seva (selfless service)</strong>.
                 </p>
@@ -408,8 +415,6 @@ header {
         </section>
         
         <section class="cta-section">
-            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 20px auto;">GET IN TOUCH WITH OUR TEAM TO KNOW MORE ABOUT SPONSORSHIP OPPORTUNITIES.</p>
-            <a href="https://www.instagram.com/bapsaustralia/" class="button">CONTACT US</a>
             <div class="logo-main" style="margin-top: 30px;">
                 <span class="kids">KIDS</span> <span class="diwali">DIWALI</span> <span class="celebration">CELEBRATION 2025</span>
             </div>
@@ -420,6 +425,70 @@ header {
     <footer>
         <a href="#" class="back-to-top">↑</a>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.header-nav');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('is-active');
+            // For accessibility, update the aria-expanded attribute
+            const isExpanded = navMenu.classList.contains('is-active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // KDC 2024 Carousel (mobile only)
+        (function() {
+            function isMobile() {
+                return window.innerWidth <= 768;
+            }
+            const images = document.querySelectorAll('.kdc-carousel .carousel-img');
+            const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+            let idx = 0;
+            let intervalId = null;
+
+            function showImage(i) {
+                images.forEach((img, j) => {
+                    img.classList.toggle('active', i === j);
+                });
+                indicators.forEach((dot, j) => {
+                    dot.classList.toggle('active', i === j);
+                });
+                idx = i;
+            }
+
+            function nextImage() {
+                showImage((idx + 1) % images.length);
+            }
+
+            function startCarousel() {
+                if (intervalId) clearInterval(intervalId);
+                intervalId = setInterval(nextImage, 2500);
+            }
+
+            indicators.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    showImage(i);
+                    startCarousel();
+                });
+            });
+
+            function handleResize() {
+                if (isMobile()) {
+                    showImage(idx);
+                    startCarousel();
+                } else if (intervalId) {
+                    clearInterval(intervalId);
+                }
+            }
+
+            window.addEventListener('resize', handleResize);
+            if (isMobile()) {
+                showImage(0);
+                startCarousel();
+            }
+        })();
+    </script>
 
 </body>
 </html>
