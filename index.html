@@ -44,6 +44,18 @@
             color: #e0e0e0;
         }
 
+        .button,
+.button.button-outline {
+    min-height: 52px;
+    /* Ensures all buttons (including icon-only) have the same height */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
         .button {
             display: inline-block;
             background-color: #ff8c00;
@@ -99,7 +111,7 @@
         }
 
         .header-logo-img {
-            height: 75px;
+            height: 63px;
             width: auto;
         }
 
@@ -199,8 +211,15 @@
             .grid { grid-template-columns: 1fr; gap: 20px; }
             .logo-main, .cta-section .logo-main { font-size: 2.2rem; }
             h2 { font-size: 2rem; }
-            .button-group { flex-direction: column; gap: 15px; }
+            .button-group { flex-direction: row !important; gap: 15px !important; justify-content: center; align-items: center; }
             .container, .cta-section { padding-left: 20px; padding-right: 20px; }
+            .button.button-outline svg {
+                display: inline-block;
+                vertical-align: middle;
+                width: 22px;
+                height: 22px;
+                margin: 0;
+            }
         }
 
         /* --- NEW: KDC 2024 Carousel Styles --- */
@@ -318,7 +337,7 @@
             <div class="grid">
                 <div class="grid-item">
                     <img src="Att_Activity.jpg" alt="Activity">
-                    <p class="attraction-title">Activities</p>
+                    <p class="attraction-title">Fun Activities</p>
                 </div>
                 <div class="grid-item">
                     <img src="Att_FacePainting.jpg" alt="Face Painting">
@@ -326,11 +345,11 @@
                 </div>
                 <div class="grid-item">
                     <img src="Att_Prasang.jpg" alt="Prasang Station">
-                    <p class="attraction-title">Prasang Station</p>
+                    <p class="attraction-title">Engaging Exhibition</p>
                 </div>
                 <div class="grid-item">
                     <img src="Att_Rides.jpg" alt="Kids Rides">
-                    <p class="attraction-title">Kids Rides</p>
+                    <p class="attraction-title">Action packed rides (only for kids)</p>
                 </div>
                 <div class="grid-item">
                     <img src="Att_Show.jpg" alt="Diwali Show">
@@ -338,19 +357,22 @@
                 </div>
                 <div class="grid-item">
                     <img src="Attractions_Fire.jpg" alt="Fireworks">
-                    <p class="attraction-title">Fireworks</p>
+                    <p class="attraction-title">Breathtaking Fireworks</p>
                 </div>
             </div>
             <p class="section-footer-text">THERE IS SOMETHING FOR EVERYONE TO ENJOY</p>
         </section>
         <section id="tickets" class="cta-section">
-            <h2>REGISTER</h2>
+            <h2>REGISTRATION</h2>
             <div class="event-details">
                 <p>FREE ENTRY FOR KIDS UNDER 12</p>
                 <p>MARK YOUR CALENDARS</p>
                 <p>TIME</p>
-                <p>BAPS Swaminarayan Hindu Mandir & Cultural Precinct, Sydney
-230 Aldington Road, Kemps Creek NSW 2178</p>
+                <a href="https://www.google.com/maps?q=BAPS+Swaminarayan+Hindu+Mandir+230+Aldington+Road+Kemps+Creek+NSW+2178" target="_blank" rel="noopener" style="color: #ffffff; font-weight: bold;">
+                  <span>BAPS Swaminarayan Hindu Mandir & Cultural Precinct</span><br>
+                  <span>230 Aldington Road</span><br>
+                  <span>Kemps Creek NSW 2178</span>
+                </a>
             </div>
             <a href="#" class="button">REGISTER NOW</a>
         </section>
@@ -402,14 +424,38 @@
             <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
                 <h2 style="color: #ff8c00;">BAPS Kids Diwali Celebrations: The Beacon of Light</h2>
                 <p style="font-size: 1.1rem; line-height: 1.8; max-width: 650px; margin: 0 auto 25px auto; color: #e0e0e0;">
-                    The Kids Diwali Celebration is proudly <strong>hosted by BAPS Swaminarayan Sanstha</strong>, offers a unique blend of fun and profound values. KDC is a vibrant celebration where children are gently guided to learn the true meaning of Diwali through engaging <strong>creativity</strong>, <strong>captivating stories</strong>, and the spirit of <strong>seva (selfless service)</strong>.
+                    The Kids Diwali Celebration is proudly <strong>hosted by BAPS Swaminarayan Sanstha</strong>, offering a unique blend of fun and profound values. KDC is a vibrant celebration where children are gently guided to learn the true meaning of Diwali through engaging <strong>creativity</strong>, <strong>captivating stories</strong>, and the spirit of <strong>seva (selfless service)</strong>.
                 </p>
                 <p style="font-size: 1.1rem; line-height: 1.8; max-width: 650px; margin: 0 auto 20px auto; color: #e0e0e0;">
                     Inspired by Pramukh Swami Maharaj’s words - “In the joy of others lies our own” - the event helps kids grow spiritually, spread kindness, and become lights in their communities.
                 </p>
                 <div class="button-group">
+                   <!-- <a href="https://www.baps.org/Global-Network.aspx" class="button">Global Network</a> -->
+                    <a href="https://www.instagram.com/bapssydney?igsh=eXdvZjFkenZhbHNl" class="button button-outline" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg width="22" height="22" viewBox="0 0 448 512" fill="currentColor" style="vertical-align:middle;">
+                            <path d="M224 202.66A53.34 53.34 0 1 0 277.34 256 53.38 53.38 0 0 0 224 202.66zm124.71-41a54 54 0 0 0-30.36-30.36C293.19 120 256 118.13 224 118.13s-69.19 1.87-94.35 13.17a54 54 0 0 0-30.36 30.36C120 162.81 118.13 200 118.13 232s1.87 69.19 13.17 94.35a54 54 0 0 0 30.36 30.36C162.81 392 200 393.87 232 393.87s69.19-1.87 94.35-13.17a54 54 0 0 0 30.36-30.36C392 349.19 393.87 312 393.87 280S392 230.81 381.71 161.71zM224 338a82 82 0 1 1 82-82 82 82 0 0 1-82 82zm85.4-148.6a19.2 19.2 0 1 1-19.2-19.2 19.2 19.2 0 0 1 19.2 19.2z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1B3AC1rJBx/?mibextid=wwXIfr" class="button button-outline" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg width="22" height="22" viewBox="0 0 320 512" fill="currentColor" style="vertical-align:middle;">
+                            <path d="M279.14 288l14.22-92.66h-88.91V127.91c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0C141.09 0 89.09 54.42 89.09 153.31V195.3H0v92.66h89.09V512h107.91V288z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
+                <h2 style="color: #ff8c00;">What is BAPS & Who are we?</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; max-width: 650px; margin: 0 auto 25px auto; color: #e0e0e0;"> ----------ABOUT------------
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; max-width: 650px; margin: 0 auto 20px auto; color: #e0e0e0;">
+                       ----------ABOUT------------               
+                     </p>
+                <div class="button-group">
                     <a href="https://www.baps.org/Global-Network.aspx" class="button">Global Network</a>
-                    <a href="https://www.instagram.com/bapsaustralia/" class="button button-outline">Stay Connected</a>
+                    
                 </div>
             </div>
         </section>
