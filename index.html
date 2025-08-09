@@ -298,6 +298,22 @@
         .kdc2024-grid .grid-item img:hover {
             transform: scale(1.05);
         }
+
+        /* Add this to your existing <style> section */
+        .footer-baps-img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            .footer-baps-img {
+                max-width: 100%;
+                padding-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -468,7 +484,12 @@
     </main>
 
     <footer>
-        <a href="#" class="back-to-top">↑</a>
+        <img 
+            src="NEW Standard Footer-White.png" 
+            alt="BAPS Footer" 
+            class="footer-baps-img"
+            style="width:100%;max-width:1200px;display:block;margin:0 auto;padding:0 0 20px 0;"
+        >
     </footer>
 
     <script>
