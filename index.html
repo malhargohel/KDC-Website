@@ -357,8 +357,7 @@
        </nav>
     </header>
 
-    <img src="KDC_2025_Logo_-_Colour.png" alt="Event Banner" style="width:100%;height:auto;margin-top:5px;">
-
+<img src="KDC 2025 Logo - Colour.png" alt="Event Banner" style="width: 100%; height: auto; display: block;">
     <main>
         <section class="container" style="padding-top: 0; padding-bottom: 0;">
              <h2 style="color: #ff8c00; margin-bottom: 20px;">What is Kids Diwali Celebrations?</h2>
@@ -526,28 +525,27 @@
     </a>
 </footer>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.header-nav');
+<script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.header-nav');
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('is-active');
-            const isExpanded = navMenu.classList.contains('is-active');
-            hamburger.setAttribute('aria-expanded', isExpanded);
-        });
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('is-active');
+        const isExpanded = navMenu.classList.contains('is-active');
+        hamburger.setAttribute('aria-expanded', isExpanded);
+    });
 
+    // --- FIX: Wait for the page to load before running the carousel script ---
+    document.addEventListener('DOMContentLoaded', () => {
         // KDC 2024 Carousel (mobile only)
         (function() {
-            // --- NEW: Get the carousel element for swipe events ---
             const carousel = document.querySelector('.kdc-carousel');
-            if (!carousel) return; // Exit if the carousel doesn't exist
+            if (!carousel) return;
 
             const images = document.querySelectorAll('.kdc-carousel .carousel-img');
             const indicators = document.querySelectorAll('.carousel-indicators .indicator');
             let idx = 0;
             let intervalId = null;
-
-            // --- NEW: Variables to track touch position ---
             let touchStartX = 0;
             let touchEndX = 0;
 
@@ -565,9 +563,7 @@
                 showImage((idx + 1) % images.length);
             }
             
-            // --- NEW: Function to show the previous image (for swiping right) ---
             function prevImage() {
-                // We use this formula to ensure the index correctly wraps around from 0 to the last image
                 showImage((idx - 1 + images.length) % images.length);
             }
 
@@ -579,11 +575,10 @@
             indicators.forEach((dot, i) => {
                 dot.addEventListener('click', () => {
                     showImage(i);
-                    startCarousel(); // Reset timer on manual click
+                    startCarousel();
                 });
             });
 
-            // --- NEW: Swipe event handling functions ---
             function handleTouchStart(e) {
                 touchStartX = e.touches[0].clientX;
             }
@@ -594,28 +589,21 @@
             }
 
             function handleSwipe() {
-                const swipeThreshold = 50; // Minimum distance in pixels for a swipe
+                const swipeThreshold = 50;
                 const deltaX = touchEndX - touchStartX;
 
                 if (deltaX < -swipeThreshold) {
-                    // Swiped Left
                     nextImage();
                 } else if (deltaX > swipeThreshold) {
-                    // Swiped Right
                     prevImage();
                 } else {
-                    // Not a significant swipe, do nothing
                     return;
                 }
-                
-                // Reset the auto-rotate timer after a manual swipe for a better user experience
                 startCarousel();
             }
             
-            // --- NEW: Add event listeners to the carousel for touch events ---
             carousel.addEventListener('touchstart', handleTouchStart, false);
             carousel.addEventListener('touchend', handleTouchEnd, false);
-
 
             function isMobile() {
                 return window.innerWidth <= 768;
@@ -623,7 +611,7 @@
 
             function handleResize() {
                 if (isMobile()) {
-                    showImage(idx); // Ensure the correct image is shown
+                    showImage(idx);
                     startCarousel();
                 } else if (intervalId) {
                     clearInterval(intervalId);
@@ -636,7 +624,8 @@
                 startCarousel();
             }
         })();
-    </script>
+    });
+</script>
 
 </body>
 
